@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>神的孩子都在跳舞 | MayDayLand</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/maydaywhite.avif"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=3.0.19"><!-- inject head--><link rel="canonical" href="http://mayday.fan/2004/11/05/%E7%A5%9E%E7%9A%84%E5%AD%A9%E5%AD%90%E9%83%BD%E5%9C%A8%E8%B7%B3%E8%88%9E/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><!-- Open Graph--><meta name="description" content="音乐是我们共有的一切 怪兽：如果有一天放下我手上的乐器， 也许我会过得更好，也许我的生活会不再日夜颠倒； 但我肯定，那时候我将不会太快乐。 石头：音乐是让敲打和吶喊有意义的法律， 像光需要“以太”才能射向他该去的方向。 冠佑：如果没有了音乐，那么开车时只剩双手握着方向盘， 窗外风"><!-- pwa--><meta name="theme-color" content="#87CEEB"><meta name="apple-mobile-web-app-status-bar-style" content="#87CEEB"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#87CEEB"><link rel="mask-icon" href="/img/pwa/favicon.png" color="#87CEEB"><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/favicon.png"><link rel="bookmark" href="/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.19' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "5-12";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script> <script>LA.init({id:"3MgjIBRKHyt9MyUR",ck:"3MgjIBRKHyt9MyUR"})</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '1997-03-29 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "☀️ 我不转弯，迎接新的早晨",
+            noon: "🍱 人生海海，吃饱继续走",
+            afternoon: "🌤️ 你不是真正的快乐，却要继续闪耀",
+            night: "🌙 疲惫了，倔强要休息",
+            goodnight: "⭐ 好好睡，做个温柔的梦",
+        },
+        witty_words: ["这一生志愿只要平凡快乐 谁说这样不伟大呢","也许会，有一天 世界真的有终点","也要举起回忆酿的甜 和你再干一杯","每个平凡的自我 都曾幻想过 然而大多的自我 都紧抓着 某个理由","每个渺小的理由 都困住自由 有些事情还不做 你的理由 会是什么","你问我全世界是哪里最美 答案是你「身边」","伤心的都忘记了，只记得这首笑忘歌","那一年天空很高风很清澈，从头到脚趾都快乐","那阳光碎裂在熟悉场景，好安静、一个人能背多少的往事，真不轻","谁的笑、谁的温暖的手心，我着迷、伤痕好像都变成了曾经","看爱过的人，一一告别，做过的梦，一一凋谢，只留下我独自残喘的千年","你静静忍着，紧紧把昨天在拳心握着，而回忆越是甜就是越伤人了，越是在手心留下密密麻麻深深浅浅的刀割","终于你身影消失在人海尽头，才发现、笑着哭最痛","如果说了后悔，是不是一切就能倒退","回忆多么美，活着多么狼狈","为什么这个世界，总要叫人尝伤悲，我不能了解，也不想了解","让盛夏去贪玩，把残酷的未来，狂放到光年外","昨天太近，明天太远，默默聆听那黑夜","晚风吻尽，荷花叶，任我醉倒在池边","也许我这一杆，又没办法进球，就像我的生活，一直在出差错","活着其实很好，再吃一颗🍎","就算整个世界把我抛弃，而至少快乐伤心我自己决定","永远等待那一日咱可以出头天，人生不怕风浪只怕自己没志气","当风雨都过去迎着风看天空，不放弃才能够有感动","这一生这一次为自己抬起头，至少要骄傲的盛开过","能不能暂时把你的梦想给我，在勇气快消失的时候","逆风的方向，更适合飞翔，我不怕千万人阻挡，只怕自己投降","就放肆爱放肆追、放肆去闯、放肆是我的信仰","喔喔ok啦，放轻松才快活，失败嘛无算啥","就算会有一天，没人与我合唱，至少在我的心中，还有个尚未崩坏的地方","我不是好子，嘛不是歹人，我只是爱眠梦","如果你爱过我，你不会就这样走，就这样丢下我和那些天真承诺"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"回来吧，难道你不怀念吗？","back":"这一生志愿只要平凡快乐！"},
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: false,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><!-- background img--><div id="global_bg"></div><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="/img/maydaywhite.avif" alt="loading image"></div></div><script>const preloader = {
+    isLoaded: false,
+    endLoading: () => {
+        if (!preloader.isLoaded) {
+            document.getElementById('loading-box').classList.add('loaded');
+            preloader.isLoaded = true;
+            preloader.togglePaceDone();
+        }
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+        preloader.isLoaded = false;
+        preloader.togglePaceDone();
+    },
+    togglePaceDone: () => {
+        document.getElementById('body').className = preloader.isLoaded ? 'pace-done' : '';
+    }
+}
+
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});
+
+setTimeout(() => {
+    preloader.endLoading();
+}, 5000);</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fas fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /:[a-z0-9_\u4e00-\u9fa5]+:/g
+    let cache = utils.saveToLocal.get('valine-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+    if (typeof md5 === "undefined") await utils.getScript('https://fastly.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js')
+    await fetch('https://dfkdg2v0.lc-cn-n1-shared.com/1.1/classes/Comment?limit=8&order=-createdAt', {
+        method: "GET",
+        headers: {
+            "X-LC-Id": 'DfKdg2V0KiLbdCmoJQa3Se32-gzGzoHsz',
+            "X-LC-Key": 'hNFFIkDHh6rK72QjsH6j96Ga',
+            "Content-Type": "application/json"
+        }
+    }).then(async res => res.json()).then(async results => {
+        for (const i of results.results) {
+            let title = ''
+            if (i.url) {
+                await fetch(i.url).then(res => res.text()).then(html => {
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(html, 'text/html')
+                    title = doc.querySelector('title').innerText
+                }).catch(() => {
+                    title = i.url
+                })
+            }
+            if (title.indexOf('|') > 0) {
+                title = title.split('|')[0]
+            }
+            ls.push({
+                title: title,
+                url: i.url,
+                nick: i.nick,
+                avatar: '' + '/avatar/' + md5(i.mail.trim().toLowerCase()),
+                time: i.createdAt,
+                content: formatContent(i.comment)
+            })
+        }
+        setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+        utils.saveToLocal.set('valine-recent-comments-console', ls, 0.2)
+    })
+
+    function setHtml(el, data) {
+        el.innerHTML = data.length !== 0 ? data.map(i => `
+                    <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                        <div class="comment-info">
+                            <img src="https://gravatar.loli.net${i.avatar}" class="nolazyload" alt="${i.nick}">
+                            <div>
+                                <span class="comment-user">${i.nick}</span>
+                            </div>
+                            <time class="comment-time" datetime="${i.time}"></time>
+                        </div>
+                        <div class="comment-content">${i.content}</div>
+                        <div class="comment-title">
+                        <i class="solitude fas fa-comment"></i>
+                        ${i.title}</div>
+                    </div>
+                `).join('') : `暂无评论...`
+        if (typeof utils !== 'undefined') utils.diffDateFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '[表情]')
+        content = content.replace(/!\[.*?\]\((.*?)\)/g, '[图片]')
+        content = content.replace(/\[.*?\]\((.*?)\)/g, '[链接]')
+        content = content.replace(/```.*?```/g, '[代码]')
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E9%98%BF%E4%BF%A1/">阿信<sup>51</sup></a><a href="/tags/%E6%88%91%E4%B9%90%E8%8B%A6%E5%A4%9A/">我乐苦多<sup>51</sup></a><a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91/">网易云<sup>9</sup></a><a href="/tags/%E4%B8%93%E8%BE%91%E4%BB%8B%E7%BB%8D/">专辑介绍<sup>9</sup></a><a href="/tags/%E4%BA%94%E6%9C%88%E5%A4%A9/">五月天<sup>9</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/07/"><span class="date">2025/07</span><div class="count-group"><span class="count">51</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2016/07/"><span class="date">2016/07</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2011/12/"><span class="date">2011/12</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2008/10/"><span class="date">2008/10</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2006/12/"><span class="date">2006/12</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2004/11/"><span class="date">2004/11</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2003/11/"><span class="date">2003/11</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2001/07/"><span class="date">2001/07</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/1997/07/"><span class="date">1997/07</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">60</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">60</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="valine_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://dfkdg2v0.lc-cn-n1-shared.com/1.1/classes/Comment?limit=-1&order=-createdAt', {
+    method: "GET",
+    headers: {
+      "X-LC-Id": 'DfKdg2V0KiLbdCmoJQa3Se32-gzGzoHsz',
+      "X-LC-Key": 'hNFFIkDHh6rK72QjsH6j96Ga',
+      "Content-Type": "application/json"
+    }
+  }).then(async res => res.json()).then(async results => {
+    document.querySelector('#valine_allcount').innerHTML = results.length
+  })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">团员</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/1265020392?t=0&amp;luicode=10000011&amp;lfid=231583" title="阿信"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="阿信"><span class="back-menu-item-text">阿信</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/1691327452?t=0&amp;luicode=10000011&amp;lfid=1076031265020392" title="怪兽"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="怪兽"><span class="back-menu-item-text">怪兽</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/mayday_stone/" title="石头"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="石头"><span class="back-menu-item-text">石头</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/mayday_ming/" title="冠佑"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="冠佑"><span class="back-menu-item-text">冠佑</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/maydaybass/" title="玛莎"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="玛莎"><span class="back-menu-item-text">玛莎</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">相信音乐</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://space.bilibili.com/1736485735?spm_id_from=333.337.0.0" title="b站"><img class="nolazyload back-menu-item-icon" src="/img/pwa/bilibili.png" alt="b站"><span class="back-menu-item-text">b站</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAGX20bOlvyyAJ5vnYucMczwLIrspOZ7lwn_gyuvweA8GDomzWZSVseYDdP3Mmyeg-" title="抖音"><img class="nolazyload back-menu-item-icon" src="/img/pwa/douyin.png" alt="抖音"><span class="back-menu-item-text">抖音</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/binmusic.ig/" title="ins"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="ins"><span class="back-menu-item-text">ins</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/2488102813?t=0&amp;luicode=10000011&amp;lfid=231583" title="微博"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="微博"><span class="back-menu-item-text">微博</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/album/"><span>专辑馆</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>五月天</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="solitude  fas fa-images"></i><span>演唱相册</span></a></li><li><a class="site-page child" href="/timeline/"><i class="solitude  fas fa-timeline"></i><span>时间轴</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>OAOA</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/message/"><i class="solitude  fas fa-message"></i><span>留言板</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-person"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/%E9%98%BF%E4%BF%A1/">阿信<sup>51</sup></a><a href="/tags/%E6%88%91%E4%B9%90%E8%8B%A6%E5%A4%9A/">我乐苦多<sup>51</sup></a><a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91/">网易云<sup>9</sup></a><a href="/tags/%E4%B8%93%E8%BE%91%E4%BB%8B%E7%BB%8D/">专辑介绍<sup>9</sup></a><a href="/tags/%E4%BA%94%E6%9C%88%E5%A4%A9/">五月天<sup>9</sup></a></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">团员</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/1265020392?t=0&amp;luicode=10000011&amp;lfid=231583" title="阿信"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="阿信"><span class="back-menu-item-text">阿信</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/1691327452?t=0&amp;luicode=10000011&amp;lfid=1076031265020392" title="怪兽"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="怪兽"><span class="back-menu-item-text">怪兽</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/mayday_stone/" title="石头"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="石头"><span class="back-menu-item-text">石头</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/mayday_ming/" title="冠佑"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="冠佑"><span class="back-menu-item-text">冠佑</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/maydaybass/" title="玛莎"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="玛莎"><span class="back-menu-item-text">玛莎</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">相信音乐</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://space.bilibili.com/1736485735?spm_id_from=333.337.0.0" title="b站"><img class="nolazyload back-menu-item-icon" src="/img/pwa/bilibili.png" alt="b站"><span class="back-menu-item-text">b站</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAGX20bOlvyyAJ5vnYucMczwLIrspOZ7lwn_gyuvweA8GDomzWZSVseYDdP3Mmyeg-" title="抖音"><img class="nolazyload back-menu-item-icon" src="/img/pwa/douyin.png" alt="抖音"><span class="back-menu-item-text">抖音</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.instagram.com/binmusic.ig/" title="ins"><img class="nolazyload back-menu-item-icon" src="/img/pwa/instgram.png" alt="ins"><span class="back-menu-item-text">ins</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://m.weibo.cn/u/2488102813?t=0&amp;luicode=10000011&amp;lfid=231583" title="微博"><img class="nolazyload back-menu-item-icon" src="/img/pwa/weibo.png" alt="微博"><span class="back-menu-item-text">微博</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">MaydayLand</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">神的孩子都在跳舞</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/album/"><span>专辑馆</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>五月天</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="solitude  fas fa-images"></i><span>演唱相册</span></a></li><li><a class="site-page child" href="/timeline/"><i class="solitude  fas fa-timeline"></i><span>时间轴</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>OAOA</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/message/"><i class="solitude  fas fa-message"></i><span>留言板</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-person"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.mayday.land" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/May_Day_-_Fallen_Angel_With_A_Flying_Soul.jpg" alt="神的孩子都在跳舞"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="记录关于五月天的小事">记录</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E4%B8%93%E8%BE%91%E4%BB%8B%E7%BB%8D/">专辑介绍</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>网易云</span></a><a class="post-meta__tags" href="/tags/%E4%B8%93%E8%BE%91%E4%BB%8B%E7%BB%8D/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>专辑介绍</span></a><a class="post-meta__tags" href="/tags/%E4%BA%94%E6%9C%88%E5%A4%A9/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>五月天</span></a></div></div></div></div><h1 class="post-title">神的孩子都在跳舞</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2004-11-05 12:03:08"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2004-11-05T04:03:08.000Z">2004-11-05T04:03:08.000Z</time></span><span class="post-meta-position" title="作者IP归属地为China"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>China</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><ul>
+<li><strong>音乐是我们共有的一切</strong></li>
+</ul>
+<hr>
+<blockquote>
+<p>怪兽：如果有一天放下我手上的乐器，</p>
+<p>也许我会过得更好，也许我的生活会不再日夜颠倒；</p>
+<p>但我肯定，那时候我将不会太快乐。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>石头：音乐是让敲打和吶喊有意义的法律，</p>
+<p>像光需要“以太”才能射向他该去的方向。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>冠佑：如果没有了音乐，那么开车时只剩双手握着方向盘，</p>
+<p>窗外风景只剩单一色彩。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>马莎：音乐是信仰、是圣经；</p>
+<p>是艰辛的取经之路，是尝试接近真理的方法；</p>
+<p>是对人生赞颂的诗篇，是对爱情无解之怨怼。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>阿信：2004年的尾声，我们暂时消失在这个世界上，去追逐理想中的声音；</p>
+<p>或者用我们的角度说，在这个静瑟而没有喧嚣的一周里，</p>
+<p>这个世界上只剩下我们五个人，</p>
+<p>只有纯粹的互相信任，音乐是我们共有的一切…</p>
+</blockquote>
+<hr>
+<p>史上第五张五月天 神的孩子都在跳舞</p>
+<hr>
+<p>于是由</p>
+<hr>
+<p>五月天五个人重回河口湖录音室 开始</p>
+<hr>
+<ul>
+<li><strong>神的孩子都在跳舞</strong></li>
+</ul>
+<hr>
+<p>在活着的每一天 跳舞吧</p>
+<hr>
+<p>用脚尖着地 手指几乎就要穿破 满涨着蓝色的天空</p>
+<hr>
+<p>满身伤痕 我们都是勇敢的孩子</p>
+<hr>
+<p>当猜忌与恐惧 对着我们张牙舞爪的时候</p>
+<hr>
+<p>幽默跟爱 将是我们最后的温暖防线</p>
+<hr>
+<p>⊙五月天五周年第五张专辑的3大方向</p>
+<hr>
+<p>2004年5月【金曲奖】最佳乐团庆功宴上，五个人一致决议！</p>
+<hr>
+<p>→JAM创作！这一张是五个人的创作奥运，每个人都要交出创作！</p>
+<hr>
+<p>这张专辑是五月天成军五年来，第一张由全体团员加入创作的专辑，阿信、马莎写词，怪兽、石头、谚明、阿信写曲。在11首歌曲当中，怪兽写了三首曲、石头、冠佑各一首；而马莎写了一首词，其余则是阿信包办，团员加入创作，阿信会不会受到“威胁”？阿信坦承当然会，但是他觉得更重要的是：这样的竞争会让大家更了解彼此、也更不分彼此，也是让五月天一起迈向十年、十五年、二十五年…最关键的第一步！</p>
+<hr>
+<p>而成军五周年推出的专辑，就是100％五个人的共同作品，就连编曲MlX，五人都要一起飞到日本，每个人都要表达出自己的意见，成为最完整的专辑。这次的合作经验，就像是全世界只剩下他们五个人，彼此都有对方可以相信的部分，大家把身体靠在对方身上，把重量放在其它团员身上，相信对方。有人少弹一点，随即有人跟进补上，形成一个最佳默契的互补作用。</p>
+<hr>
+<p>在订立出100％共同参与的大方向后，进入了创作狂飙期，互相讨论给予意见、互相吐槽求进步，每个人都卯足了劲分头要写出五个人都认同的歌曲，有时又不分彼此相约帮忙录DEMO，曾经在创作最高潮的一星期内，一次选歌会上，五个人共交出了27首作品，大家都发现了彼此内在都有过去不曾发现一座活火山，只等最满溢的一刻就要爆发。而选歌会议时的畅所欲言、一人一票的生杀大权，更有助于大家进入五体合一的认同感，就像四年一度的奥运一样，历经初赛、复赛、决赛，最后大家最大的满足感竟然是缺一不可的那面团体总锦标。</p>
+<hr>
+<p>帮团员写词的阿信，创作的乐趣则在揣摩团员写曲时的心境与企图，用问的就不好玩了。在他眼中，写出「孙悟空」一曲的怪兽，个性就是活脱脱的孙悟空，石头对于地球人明天的期待与希望，写词就像是帮他们讲出他们要讲的话，其实非常有成就感。</p>
+<hr>
+<p>在经历过这样创作狂飙的极乐后，他们体认到，这张专辑就是要找回做音乐的快乐，相较上张『时光机』，当时大家各自从不同的环境中回来，有很多不确定感，团员熟悉又陌生的感觉，使得大家必须进入一段痛苦的磨合期，就像是合煮一道菜，上张专辑大家都像是军备竞赛一般拚命加料，把能力发挥到极限。但这张专辑却是你加了甜味后，我应该加什么东西让你的甜味能够散发出迷人的香气，彼此经过重新探索的过程，再一次交响出音乐上水乳交融的迷人气味。</p>
+<hr>
+<p>→JAM感情！这一张五个人都要摒除外在干扰，只有重回大家最怀念的河口湖录音室才办得到！</p>
+<hr>
+<p>河口湖录音室，这是2000年五月天录制『爱情万岁』这张唱片的地点。五月天选择了回到这里，不只是要再重温这个录音室声音中独有的狂热感，也希望『神的孩子都在跳舞』的乐曲中，听得见阳光、风、大地的脉搏和呼吸。</p>
+<hr>
+<p>这五年来，五月天红了、行程满了、有人当兵、有人结婚、有人经历生离死别，有了自己的大鸡腿、有了越来越多不分国籍的亚洲乐迷，但他们五个人都知道，只有回到原点才能找回原力！在这一个他们也和所有人都期待他们展现更强大音乐影响力的时刻，他们毫不犹豫婉拒所有通告、摒除所有收入惊人的商业活动、离开方便熟悉的台北，来到了这里，一个仿如森林学校的学生宿舍，像在附中吉它社那些日子，窝在一起、撞在一起，没有人能离开，也没有人想离开…</p>
+<hr>
+<p>时间：2004年9月</p>
+<hr>
+<p>地点：日本 富士山 河口湖录音室</p>
+<hr>
+<p>魔鬼录音集中营 数字比一比</p>
+<hr>
+<ul>
+<li><p>鼓 3套</p>
+</li>
+<li><p>空运吉他及贝斯 37把</p>
+</li>
+<li><p>行李及录音配件 11大箱</p>
+</li>
+<li><p>经济舱来回机票 15张</p>
+</li>
+<li><p>行李超重费103公斤 原价33万台币(求情打折10万台币)</p>
+</li>
+<li><p>录音室租金 2800000日圆</p>
+</li>
+<li><p>录音师 1600000日圆</p>
+</li>
+<li><p>宿舍租金(八房) 350000日圆</p>
+</li>
+<li><p>伙食费 250000日圆</p>
+</li>
+<li><p>打断鼓棒 11支</p>
+</li>
+<li><p>啤酒 28手168罐</p>
+</li>
+<li><p>5人国际电话漫游费 45000台币</p>
+</li>
+<li><p>5人闭关一周总减重量 31公斤</p>
+</li>
+<li><p>电烫棒(冠佑专用) 1支</p>
+</li>
+</ul>
+<p><strong>以上费用不含</strong></p>
+<ol>
+<li><p>大鸡腿录音室vocal dubbing及练团费用</p>
+</li>
+<li><p>后期mixing混音费用及机票</p>
+</li>
+<li><p>LA母带MASTERING费用及机票</p>
+</li>
+</ol>
+<p>→JAM编曲！这一张坚持BAND SOUND的最本质，所以编曲一定要采同步录音！</p>
+<hr>
+<p>回归到乐团的本质，除了创作，就是录音的部分，这次五月天选择同步现场录音，回到第二张专辑『爱情万岁』录音的河口湖录音室重拾乐团录音的快乐。从『人生海海』到『时光机』，大家在意技巧、精致度，像是一碗放在白瓷碗里的蚵仔面线，面线依然好吃，却觉得少了一些什么气味。这也是乐团创作跟其它音乐不一样的地方，要说BAND SOUND粗糙，不如说，很多音乐可以用计算机、MIDI，算出完美的结构与比例，却少了人的味道，计算机可以提供完美的比例，却说不出人的心情，这也是乐团创作的魅力，音乐是一种生活的态度，说出人心底难以言喻的感情。</p>
+<hr>
+<p>为了同步现场录音，出发前各人勤练之外，每次练习都会录下来听，看看怎么样的呈现方式会是最好、最感动人的，所有的呈现方式，都要5人讨论一致通过。而编曲上则采即兴创作，更自由狂放，用一趟练团的过程，慢慢粹练出最适合演出的方式，也因此这张专辑是最适合现场演出的一张专辑。单纯、回归到最原始的音乐动人本质，就是乐团的动人之处。</p>
+<hr>
+<p>前往日本河口湖录音期间，带去的器材是上次的两到三倍，带去的乐器项目超过40个ITEM，价值超过150万元，还在当地租了70万的器材，台湾籍老板娘在得知是五月天来租器材后，慷慨给予打折，只要求签名CD交换。而过多的器材也造成超重，幸而航空公司也给予赞助，起重费打折罚了10万元。</p>
+<hr>
+<p>同步录音的苦楚，在于有人凸槌就得重来。由于录音室BOOKING满档、再加上一行十余人，在高消费的日本每多留一天就多花一大把白花花的银子，大家每天工作都超过18个小时，就算有人凸槌，也没人敢喊累、也没人说放弃，大家都万分珍惜这样的机会，也坚持要证明这个一致的决定是最对的选择。</p>
+<hr>
+<p>而与冠佑同寝室的马莎，则是大爆室友隐私，由于房间没有准备毛巾，冠佑洗完澡后不仅撕下卷筒卫生纸仔仔细细把身上的水珠拭净，还拿起一旁排成一排整整齐齐的精油，开始抹了起来，尽管冠佑坚持精油的疗效不错，大家还是不认同他这种“不MAN”的行为。诸如种种的苦中作乐，都让五月天第五张专辑比过去的任何一张作品更充满着五个人血淋淋的痛苦、活生生的笑声、抹不去的记忆…</p>
+<hr>
+<p>为了自己理想中的BAND SOUND，五月天五个人还没发片就花光了第五张专辑的预付版税；从进河口湖的第一天到交母带的那一天，五个人废寝忘总共自然减重30余公斤；更不得已“六亲不认”的错过了父亲节、中秋节，最惨的石头连结婚两周年纪念日都只能透过WEB CAM跟老婆举杯。但是，在交出母带的那个以便利商店微波食物下酒的半夜庆功宴、在录音完成的富士山脚下放金鱼花火庆祝的星空，他们知道，有些他们一起相信的东西，从此，再也不会远去……</p>
+<hr>
+<ul>
+<li><strong>富士山脚下，录音大功告成的那一刻</strong></li>
+</ul>
+<hr>
+<p>仰望着向上窜升的花火 环顾着放肆宣泄的团员</p>
+<hr>
+<p>八个字闪入阿信的脑中：<strong>神 的 孩 子 都 在 跳 舞</strong></p>
+<p>每个人都在间为何叫『神的孩子都在跳舞』？谁也没想到那只是生命中某一个不由自主的激动片刻，我们的潜意识对我们的渴望打了一个暗号；我们的宇宙刚好恶作剧的对我们眨了一下眼睛，跟村上春树无关。跟宗教无关。跟我们的相信有关。跟我们的希望有关。</p>
+<hr>
+<p>或许，摇滚，是我们这一代最永恒的原始舞曲……</p>
+<hr>
+<ul>
+<li>阿信对『神的孩子都在跳舞』的第一个直觉：</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我就是我的神，站在我自己的世界中，找寻着梦想的道路，在这张出场人物最多的专辑中，有许多小人物悲伤快乐的故事，在各自的生涯中为自己活着，在自己的人生中用自己的节奏跳着舞。</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>怪兽对『神的孩子都在跳舞』的第一个直觉：</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们都是同一挂的，都是神的孩子。有种大家可以一起去做同一件事情的感觉，就像是我们的专辑，就是我们五个人一起完成的。</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>马莎对『神的孩子都在跳舞』的第一个直觉：</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">刚看到时有点诧异，不知道专辑名称跟内容有何连结，但专辑进行中，就发现了两者相关之处。神代表着信仰，世界上每个人的信仰都不一样，但都有他自己相信的事情。也在做着他自己相信的事情，在这专辑中有提到很多人物，这些人也都有自己相信的事情，努力不懈地为此奋斗着。</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>石头对『神的孩子都在跳舞』的第一个直觉：</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">看到神的孩子四个字，感觉跟自己很无关，因为奶奶是佛教徒，但神说的好像是西方宗教，后来才发现自己错了，神这个字并不重要，不管东方西方都是神佛，而我们都是神最重要的孩子，我们都应该要开心的跳舞。</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>冠佑对『神的孩子都在跳舞』的第一个直觉：</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">感觉在这地球上发生了种种的事情，地球村里的人尽管肤色语言不同有着隔阂，但追求着很多相同的事情。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li><strong>史上第五张五月天 史上最五多</strong></li>
+</ul>
+<hr>
+<ol>
+<li>跨国录音后制，国际机票张数最多</li>
+</ol>
+<hr>
+<p>河口湖同步录音编曲：台北←→东京来回机票12张</p>
+<hr>
+<p>东京GALVA STUDIO MIXING：台北←→东京来回机票7张</p>
+<hr>
+<p>倔强MV SHOOTING：台北←→东京来回机票15张</p>
+<hr>
+<p>L.A. MASTERING：台北←→LA来回机票15张</p>
+<hr>
+<p>全亚洲同步发行专人快递母带：台北←→星、马、港、内地来回机票3张</p>
+<hr>
+<p>共计耗费47张国际机票</p>
+<hr>
+<ol start="2">
+<li>一路与老天赛跑，遇到天灾最多</li>
+</ol>
+<hr>
+<p>倔强MV SHOOTING：遇上关东地区史上最大台风，只好移师棚内。</p>
+<hr>
+<p>东京GALVA STUDIO MIXING制作人抵达成田机场一落地，机场即因台风关闭，差点赶不上进度，只能DELAY发行。</p>
+<hr>
+<p>倔强 MV 母带：预计送抵台北当日，遇上七级大地震，交通大乱，搞得人仰翻。</p>
+<hr>
+<p>新歌第一次首唱：新歌第一次在国泰世华演唱会首唱，晚上10点遇上首次震央在台北盆地的地震，所有人正在台上浑然不觉。</p>
+<hr>
+<ol start="3">
+<li>奇想灵感源源不绝，歌词出现中外人物最多</li>
+</ol>
+<hr>
+<p>这张专辑出场的人物，包括了孙悟空、小护士、约翰伦农、地球人、超人、沙悟净、猪八戒、医生、色狼、怪兽、石头、宜静、大雄、五月天、诸葛亮、妈妈、爸爸、雪人、圣诞老人等19个人物。</p>
+<hr>
+<ol start="4">
+<li>创作曲数最多，制作DEMO最多</li>
+</ol>
+<hr>
+<p>由于一开始就约定这一次以五个人都参与创作为前提，所以不同以往几乎只等阿信一人。不含之前让想阶段，光最后收歌会议四个月期间，五个人前后共交出90余首创作，而为了争取认同、说服团员，同一首创作所发展出来的不同编曲更加倍于此。是竞争最激烈的一次、淘汰DEMO最多的一次，却也是五人共识最高的一次。</p>
+<hr>
+<ol start="5">
+<li>整合营销投资高达两亿，代言搭配广告项目</li>
+</ol>
+<hr>
+<p>所有产品与厂商都锁定第一天团的群众魅力与超强聚众力。搭配此次“有史以来最五月天的专辑”出击中，截至目前共计有“国泰世华银行CF主题曲”、“中华电信摩登399CF”、“全家便利商店秋季甜点CF”、“青岛啤酒”、“某金饰广告”…两个月内共计超过两亿元台币的媒体曝光，更让这张跨年最具份量的大碟声势推波助澜！</p>
+<hr>
+<ul>
+<li><strong>当我和世界不一样 那就让我不一样</strong></li>
+</ul>
+<hr>
+<p>五月天「倔强」坚持不一样的视觉突破</p>
+<hr>
+<p>从唱片公司到五月天到MV制作群 大家互比倔强！！</p>
+<hr>
+<p>亚洲第一天团五月天2000万的天王级配备 日本MV超强制作天团跨国大合作</p>
+<hr>
+<p>日本天王巨星御用导演丹修一被五月天的「倔强」说服 第一次给了五月天</p>
+<hr>
+<p>从大家兴奋完成的十二首创作中，五人无异议一致票选出元气淋漓、最能代表五个人一路打不死精神的首波主打「倔强」。在一开始讨论这首主打歌的视觉方向时，五人踊跃提出了许多不错的作品与大家脑力激荡，其中有U2、日本【情书】导演岩井俊二的「青春电幻物语」、GLAY的「MARMEID」，还有阿信力荐Mr. Children的「向光映射的地方」(光 射 方)等 ，在深入了解后，意外发现Mr. Children与GLAY的MV皆为日本超级天王导演丹修一所执导，但由于丹修一在日本贵为天王巨星所御用导演，举凡滨崎步、木村拓哉、竹野内丰都要排队等待导演档期，而大家也心知肚明日本顶级影像制作的天文数字恐怕不是一般案子吃得消的。所以五月天只是抱着姑且一试的心情向公司提案，也只是借着这样的视觉元素与企划人员沟通他们想呈现的质感与tone调。没想到公司高层竟然当真、开始大力促成，用越洋电话和E-mail和导演沟通无数次，本来导演在档期上十分为难，最后五月天直接把创作寄给导演听，没想到就这样「倔强」地一举打动了导演，决定把他踏出日本的处女秀献给五月天。还特别为五月天邀来Mr. Children御用摄影川津太郎为MV做摄影指导，平面拍摄部分也是赫赫有名的野村浩司，当亚洲第一天团五月天遇上日本MV超级制作天团，五人难掩兴奋神情，直呼像做梦一样，整支MV光制作费就耗资2000万日币，但公司上下一致认为这是五月天应该拥有的天团级配备，也咬着牙狠狠要给五月天他们拼命作音乐应得的尊重。</p>
+<hr>
+<p>五月天在到达日本时，打开电视不时都看见丹修一导演最新作品斐勇俊的电视广告，更对这位大导的影响力不敢小觑。初见导演时，五人露出自创斐勇俊式笑容，一下子让表面上很酷的导演笑了起来、也很快与五人熟识了起来，导演不但分别喊出五人的名字，还直夸比照片上还瘦，让五月天好生惊讶。「倔强」MV全程在素有“日本好莱坞”之称的东京【东宝影业】片厂完成，五月天也生平第一次见到孩童时的偶像“咸蛋超人”，在MV拍摄中，导演秉持“保持纯真与梦想，不要被社会同化”的倔强概念，拍摄出五月天不同于以往的特质，日本的制作一向以严谨出名，连风扇的方向速度都可以调整一个多小时，可见「倔强」程度相当，连五月天从台湾带去的吉他，颜色都先经过导演的审核，导演还倔强的坚持用35厘米拍摄，比台湾惯用的16厘米贵上一倍，五月天在片场更受到国际巨星般的礼遇，五人深深感受到导演倔强的用心，片场动用了110个演员，其中有一场景是35个黑衣人戴着导演自创的夜光眼镜，呈现出黑暗中的超现实感，另外75个年轻潮流达人，导演用两个世界的光明黑暗对比对出「倔强」里不想被现实同化的中心意念，而导演和化妆师(日本GLAY御用)透过镜头都直称赞五人眼睛都很迷人，五月天不好意思的说：「都是因为没有睡饱所以才有迷蒙美。」</p>
+<hr>
+<p>五月天史上第五张『神的孩子都在跳舞』首波主打「倔强」是由阿信作曲填词，阿信说：「歌曲想表达一夫当关，万夫莫敌的感觉，丹修一导演完全抓住我想透露的，更让我从出生到现在第一次这么帅。」导演擅用阿信的眼神，让旁人称赞很有【无间道】的气势，导演说：「阿信的心里面住了一个小孩，有一种浑然天成的纯真。」虽然MV拍摄不眠不休的从早上6点到隔天早上7点，但这次无国界的音乐之旅，让五月天大呼超值得！也再一次让他们确定他们可以用音乐跟全世界沟通。</p>
+<hr>
+<ul>
+<li><strong>超音速飙爆22OBPM 五月天主义的最绝对表态</strong></li>
+</ul>
+<hr>
+<p>第一次全员创作到齐 史上最多中外人物共舞</p>
+<hr>
+<p>这张专辑出场的人物，包括了孙悟空、小护士、约翰伦农、地球人、超人、沙悟净、猪八戒、医生、色狼、怪兽 、石头、宜静、大雄、五月天、诸葛亮、妈妈、爸爸、雪人、圣诞老人等19个人物。是反英雄主义的五月天藉虚拟英雄建构的不死埋想国、是小人物活出自我主权的NON-STOP摇滚轰趴。是“飘一代”的特洛伊ODYSSEY。</p>
+<hr>
+<ul>
+<li><strong>五月天种族最坚持的十三首原创密码公开</strong></li>
+</ul>
+<hr>
+<p><strong>孙悟空</strong></p>
+<hr>
+<p>怪兽腾云驾雾创作飙曲＋阿信七十二变狂想作词。神秘主义曲风前导，带出音乐中的飞翔感与异次元时空。匪夷所思的新世纪嘻游记反讽现实造化，第五张五月天最爽快的第一首摇滚神话。</p>
+<hr>
+<p>这首曲子是怪兽梦中神来一笔的作品！当五月天在作曲爆发期期间，所有人都绞尽脑汁交创作，怪兽写到第五首歌时，脑筋一片混沌，索性去睡觉，结果习惯用阿信的声音来检查自己创作的怪兽，居然梦到阿信的声音在唱一段旋律，他赶紧爬起来用录音笔记下，按着倒头就睡，没多久旋律又出现，这样反复两遍，怪兽干脆不睡，起来继续写曲，这首创作就这样神乎其技地诞生。</p>
+<hr>
+<p>这首歌应该是怪兽与阿信“两人三脚创作法”的最巅峰。这首曲他原先设想的是要写出飞翔感、冒险奋斗的歌曲，跟怪兽默契很好的阿信，在与马莎讨论歌词走向时，马莎一句「孙悟空在花果出的时候，用金箍棒枢耳朵一定很无聊」，引发了阿信的创作概念，认为成功的满足感是来自于过程而非结果，就这样，齐天大圣孙悟空登场。在编曲录音上，怪兽用电吉他弹出印度曲风的段落，他一直觉得电吉他的迷幻与印度的神秘感很合，因此有这种新的尝试。</p>
+<hr>
+<p><strong>倔强</strong></p>
+<hr>
+<p>五月天主义的最绝对态度，五月天种族的最音乐坚持。英式摇滚曲风倔强流窜“飘一代”的血液，美式摇滚音色倔强表态“我这国”的神情。五月天倔强继「憨人」之后，最不妥协五月天梦想交响乐！</p>
+<hr>
+<p>这首歌是阿信在遭遇“黑道家族”事件时，心有所感的作品。当传出阿信的家族有黑道背景时，阿信与团员人在上海附近做校园演唱会，接到同事来电说台湾爆出了这条新闻，当时阿信不想让别人担心他的状态，他却不由得担心起家人好不好？在北投，因为历史背景与环境的关系，或多或少都有复杂的人际关系，他的叔叔伯伯也许身处在复杂的社会关系中，却因为他追求音乐的梦想、站在舞台前，而被迫也必须赤裸裸的摊开在大众的眼帘下。</p>
+<hr>
+<p>「在那样的环境中，我有不少同学可能误入歧途、可能曾经找过我去参与其中，但我的父母让我在这样的环境中，支持我念书听音乐的兴趣，让我今天能够进入另一个世界，每个人的背后都有自己的过去，越有那样的过去，才越有展翅高飞的未来。」也就是歌词当中的「妳不在乎我的过往 看到了我的翅膀 你说被火烧过 才能出现凤凰」。</p>
+<hr>
+<p>也因此这首歌在DEMO时就已经有了副歌的歌词，阿信说，时光机专辑时，五人刚从不同的状态归队，心中有许多不确定感，团员既熟悉又陌生、歌迷不知道会不会继续支持…，这样的心态反映在专辑走向上，除了音乐比较沉重，也像是还有玩心的年轻人的作品。但这张专辑要做出一张有态度的东西，因此这首歌在编曲时还是以简单为出发点，强调的是低音与踏实感。而在录音时，光是练习冠佑就打断两次鼓棒、后来小鼓的后面鼓皮还坏掉，可见这首歌的力度与强度。</p>
+<hr>
+<p><strong>垃圾车</strong></p>
+<hr>
+<p>苦等最久“五”当派台语歌，纯净音乐风格化繁为简，表达每个男女对最爱的抱怨与需要，充满着矛盾的心情。松吐苦水，甜蜜诉甘苦。新台客示爱代表作。</p>
+<hr>
+<p>这首歌是专辑中唯一一首台语歌，也是继『人生海海』专辑三年后，久违的五月天经典台语创作。有趣的是，本来阿信写曲时并未想到是台语歌，只想是一首抒情佳作，没想到在唱片公司高层一句「听起来蛮台喔」，阿信转而创作成苦笑版的「志明与春娇」。因为这首歌写出一般人对爱说不出口，用互相抱怨来代替情话的沟通方式，明明是互相需要，却又偏偏说不出口，只能用嫌东嫌西来减低心中对对方的爱，其实这种躲在抱怨背后的，是浓浓化不开的情意！</p>
+<hr>
+<p><strong>小护士</strong></p>
+<hr>
+<p>60年代复古摇滚。自从有五月天以来，最俏皮的情歌。以轻松方式，唱出对小护士爱慕与幻想的矛盾心情。小心肝！这首歌有一点点色。</p>
+<hr>
+<p><strong>让我照顾你</strong></p>
+<hr>
+<p>摇滚与民谣的结合，唱出对于人生辉煌与冷漠回忆的无力，试着传达温暖的冲动。越严寒的冬天听越想流泪，谁不想要一个最平凡的天长地久。</p>
+<hr>
+<p><strong>约翰伦农</strong></p>
+<hr>
+<p>马莎阿信最后关头在日本填词，写给一起渡过五周年的团员们与每一个想搞BAND的朋友。透过与约翰伦农的对话，以70年代的观感看纷乱的现代，轻快却富含力量，玩一些披头四玩过的技巧，向披头四致敬。</p>
+<hr>
+<p><strong>回来吧</strong></p>
+<hr>
+<p>受到覆水难收的人才能体会的孤独豪迈感，音乐上却故做坚强的收敛压抑，是「志明与春娇」不能长相厮守的未完结反证。每一句重复呼喊「回来吧！」都是明知不可为而为之的浪子心声。</p>
+<hr>
+<p><strong>错错错</strong></p>
+<hr>
+<p>卡侬的歌曲乐风，歌中听到的弦乐均为怪兽以电吉他一音一音的弹出来，怪兽换了五把吉他，录了13轨声音，试出不一样的音色，马莎第一次以Double Bass(电低音大提琴)的特殊低音，来代替传统的低音大提琴，古典元素的大量加入与呈现，可说是用摇滚的乐器，谱出古典的风味。</p>
+<hr>
+<p><strong>晚安地球人</strong></p>
+<hr>
+<p>地球最大灾难是人类自己？石头展现更大作曲格局。动用一百多道声轨，冠佑录完整首打破二面鼓皮，强调鼓的力量与节奏，西洋定音鼓与中国战鼓交擂震撼出人类的自由渴望。五月天成军以来最LP的一首史诗，Love&amp;Peace是最后响起的一记和平钟！</p>
+<hr>
+<p><strong>超人</strong></p>
+<hr>
+<p>冠佑首次被逼交出压箱宝创作曲。在编曲上以电影配乐的感觉来完成，阿信作词的反传统新配方。以表面幽默的语气比喻内心永远无解的爱情难题。克里斯托弗利瓦伊飞走了，但每个人心里那个超人不能死。</p>
+<hr>
+<p><strong>神的孩子都在跳舞(instrumental)</strong></p>
+<hr>
+<p>圆舞曲的结构，利用节拍器、直笛、玩具枪、三角铁、小钢琴…等小元素，回归到童时唱游课的纯真的跳舞一瞬间，一起找回最初的原力，享受一起随音乐起舞的快乐。</p>
+<hr>
+<p><strong>圣诞夜惊魂</strong></p>
+<hr>
+<p>超越「终结孤单」，超速狂飙22OBPM，MAYDAY有史以来节奏最快的歌曲，也是让大家演奏到青筋暴凸的歌。请注意结束时冠佑的喘气声与大家的笑声。圣诞节是唯一对全世界都充满祝福的一天，圣诞老人的最好的礼物竟然是心跳最快的那次初吻。</p>
+<hr>
+<p><strong>垃圾车 朋友版</strong></p>
+<hr>
+<p>五月天第一次五个人同时合唱的歌，诞生于魔鬼录音室内的随性创作，是石头跟冠佑对台语歌词的挑战，也是送给歌迷的歌，谢谢大家五年来的陪伴与守候。确定是跨年最火的首选狂欢K歌！可说是最能纪念五月天五周年的一首主题曲！</p>
+<hr>
+<ul>
+<li><strong>五月天 5 th</strong></li>
+</ul>
+<hr>
+<blockquote>
+<p>怪兽：跟这群痞子不顾一切的在音乐里干些坏事、真的很过瘾！</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>马莎：同步录音让我们的爽感都在音乐里完全狂奔…</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>石头：在每一个小节里，目光交会的那一个人就像自己；有着同样的喜怒哀乐，交织的生活体验。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>冠佑：谁偷走了我的电棒烫？？</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>阿信：最后，如果你以为音乐对我们是最重要的一件事，那你也许错了:)</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://music.163.com/#/album?id=38259">网易云专辑介绍以及专辑列表</a></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/maydaywhite.avif"></div><div class="post-copyright__author_name">三三🥕</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="公益支持" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>公益支持</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">捡回珍珠计划</span><ul class="reward-group"><li class="reward-item"><a target="_blank" rel="noopener" href="https://www.xhef.org/project/detail/PRO1539779293396676608"><img class="post-qr-code-img nolazyload" src="data:image/png;base64,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" alt="捡回珍珠计划" style="border-color: undefined"></a><div class="post-qr-code-desc">捡回珍珠计划</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">金多虾</div><div class="reward-dec">帮助家境相对困难、品学兼优的初高中珍珠生，能享受到公平而有质量的教育机会。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fmayday.fan%2F2004%2F11%2F05%2F%25E7%25A5%259E%25E7%259A%2584%25E5%25AD%25A9%25E5%25AD%2590%25E9%2583%25BD%25E5%259C%25A8%25E8%25B7%25B3%25E8%2588%259E%2F&amp;title=%E7%A5%9E%E7%9A%84%E5%AD%A9%E5%AD%90%E9%83%BD%E5%9C%A8%E8%B7%B3%E8%88%9E&amp;desc=undefined&amp;summary=undefined&amp;site=%E7%A5%9E%E7%9A%84%E5%AD%A9%E5%AD%90%E9%83%BD%E5%9C%A8%E8%B7%B3%E8%88%9E&amp;pics=https%3A%2F%2Fmaydaysansan.oss-cn-beijing.aliyuncs.com%2FMay_Day_-_Fallen_Angel_With_A_Flying_Soul.jpg" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fmayday.fan%2F2004%2F11%2F05%2F%25E7%25A5%259E%25E7%259A%2584%25E5%25AD%25A9%25E5%25AD%2590%25E9%2583%25BD%25E5%259C%25A8%25E8%25B7%25B3%25E8%2588%259E%2F&amp;title=%E7%A5%9E%E7%9A%84%E5%AD%A9%E5%AD%90%E9%83%BD%E5%9C%A8%E8%B7%B3%E8%88%9E&amp;pic=https%3A%2F%2Fmaydaysansan.oss-cn-beijing.aliyuncs.com%2FMay_Day_-_Fallen_Angel_With_A_Flying_Soul.jpg" title="分享到微博"><i class="solitude fab fa-weibo"></i></a></div><div class="post-copyright__notice"><span class="post-copyright-info"><a href="/"></a>完整转载请注明来自<a href="/">MayDayLand</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>网易云<span class="tagsPageCount">9</span></span></a><a class="post-meta__tags" href="/tags/%E4%B8%93%E8%BE%91%E4%BB%8B%E7%BB%8D/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>专辑介绍<span class="tagsPageCount">9</span></span></a><a class="post-meta__tags" href="/tags/%E4%BA%94%E6%9C%88%E5%A4%A9/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>五月天<span class="tagsPageCount">9</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2006/12/29/%E4%B8%BA%E7%88%B1%E8%80%8C%E7%94%9F/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">为爱而生</div></div></a></div><div class="next-post pull-right"><a href="/2003/11/11/%E6%97%B6%E5%85%89%E6%9C%BA/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">时光机</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="valine-comment-count" data-xid="/2004/11/05/%E7%A5%9E%E7%9A%84%E5%AD%A9%E5%AD%90%E9%83%BD%E5%9C%A8%E8%B7%B3%E8%88%9E/" itemprop="commentCount"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div class="vcomment" id="vcomment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/maydaywhite.avif"></div><div class="description">你问我全世界是哪里最美， 答案是你「身边」。</div><div class="bottom-group"><span class="left"><div class="name">三三🥕</div><div class="desc">当一阵风吹来，风筝飞向天空～</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/everfu" title="Instagram"><i class="solitude  fab fa-instagram"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/1329819902" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/07/04/%E7%9F%A5%E8%B6%B3/" title="知足"><div class="thumbnail"><img alt="知足" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/045ddc47fc11d7e91f84e518e6de5e2772fcb4d7.png%40900w_900h.avif"></div><div class="content"><span class="title" href="/2025/07/04/%E7%9F%A5%E8%B6%B3/" title="知足">知足</span><span class="categories" href="/2025/07/04/%E7%9F%A5%E8%B6%B3/">我乐苦多</span></div></a><a class="aside-list-item" href="/2025/07/04/%E6%84%9B%E5%88%B0%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/" title="愛到無可救藥"><div class="thumbnail"><img alt="愛到無可救藥" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/aidaowuyaokejiu.jpg"></div><div class="content"><span class="title" href="/2025/07/04/%E6%84%9B%E5%88%B0%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/" title="愛到無可救藥">愛到無可救藥</span><span class="categories" href="/2025/07/04/%E6%84%9B%E5%88%B0%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/">我乐苦多</span></div></a><a class="aside-list-item" href="/2025/07/04/%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/" title="無可救藥"><div class="thumbnail"><img alt="無可救藥" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/377adab44aed2e738bd43f30ec54b68b87d6277f4c2b.webp"></div><div class="content"><span class="title" href="/2025/07/04/%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/" title="無可救藥">無可救藥</span><span class="categories" href="/2025/07/04/%E7%84%A1%E5%8F%AF%E6%95%91%E8%97%A5/">我乐苦多</span></div></a><a class="aside-list-item" href="/2025/07/04/%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E5%8F%AF%E4%BB%A5/" title="可以，不可以"><div class="thumbnail"><img alt="可以，不可以" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/8897cfdbb0a2b181c1192ad342c2862bfc77075e.jpg%40400w_400h.webp"></div><div class="content"><span class="title" href="/2025/07/04/%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E5%8F%AF%E4%BB%A5/" title="可以，不可以">可以，不可以</span><span class="categories" href="/2025/07/04/%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E5%8F%AF%E4%BB%A5/">我乐苦多</span></div></a><a class="aside-list-item" href="/2025/07/04/%E5%8F%AF%E6%A8%82%E6%88%92%E6%8C%87/" title="可樂戒指"><div class="thumbnail"><img alt="可樂戒指" src="https://maydaysansan.oss-cn-beijing.aliyuncs.com/dfbc336fbb8a1ff5cbb602eb9f694235b9b9de4d.jpg%40900w_900h.avif"></div><div class="content"><span class="title" href="/2025/07/04/%E5%8F%AF%E6%A8%82%E6%88%92%E6%8C%87/" title="可樂戒指">可樂戒指</span><span class="categories" href="/2025/07/04/%E5%8F%AF%E6%A8%82%E6%88%92%E6%8C%87/">我乐苦多</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>MaydayLand</span></div><div class="footer-bar-description"></div><a class="footer-bar-link" href="mailto:sansan@mayday.fan">投稿:sansan@mayday.fan</a></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src="/img/maydaywhite.avif">三三🥕</a></div><div class="beian-group"><a class="footer-bar-link" href="#" title="© 5555 活到那一天"><span class="beian-name">© 5555 活到那一天</span></a></div></div></div></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" id="menu-allcategories" onclick="pjax.loadUrl('/categories/')||rm.hideRightMenu()"><i class="solitude fas fa-clone"></i><span>全部分类</span></div><div class="rightMenu-item" id="menu-alltags" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/js/utils.js?v=3.0.19"></script><script src="/js/main.js?v=3.0.19"></script><script src="/js/third_party/waterfall.min.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script><script src="https://fastly.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="/js/tw_cn.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://fastly.jsdelivr.net/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=3.0.19"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><div class="js-pjax"><script>(() => {
+    const initValine = () => {
+        const valine = new Valine({
+            el: '#vcomment',
+            appId: 'DfKdg2V0KiLbdCmoJQa3Se32-gzGzoHsz',
+            appKey: 'hNFFIkDHh6rK72QjsH6j96Ga',
+            avatar: 'wavatar',
+            serverURLs: 'https://dfkdg2v0.lc-cn-n1-shared.com',
+            emojiMaps: "",
+            path: window.location.pathname,
+            visitor: true,
+            ...{"placeholder":"就算世界荒芜，总要有人写下温暖。🖐️","requiredFields":["nick","mail"],"lang":"zh-CN","pageSize":50,"highlight":true,"enableQQ":true}
+        })
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'))
+        sco.owoBig({body: '.vwrap', item: '.vemojis i'})
+    }
+    const loadValine = async () => {
+        if (typeof Valine === 'function') setTimeout(initValine, 0)
+        else {
+            await utils.getScript('https://fastly.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js').then(initValine)
+        }
+        false && barrageValine()
+    }
+    if ('Valine' === 'Valine' || false) {
+        if (false) utils.loadComment(document.getElementById('vcomment'), loadValine)
+        else loadValine()
+    } else {
+        window.loadTwoComment = loadValine
+    }
+})()
+</script><script>mermaid.run();
+</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="7356452759" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/07/04/知足/","2025/07/04/愛到無可救藥/","2025/07/04/無可救藥/","2025/07/04/可以，不可以/","2025/07/04/可樂戒指/","2025/07/04/盛夏光年/","2025/07/04/秒殺/","2025/07/04/錯過那個叫做周華健的歌手。/","2025/07/04/方以文成山-赫然見李白/","2025/07/04/上帝保佑。/","2025/07/04/最終最終話/","2025/07/04/相信/","2025/07/04/人類/","2025/07/03/這天-我向那個即將消逝的城市告別/","2025/07/03/熱情與冷靜之間/","2025/07/03/沉默（-）/","2025/07/03/給你/","2025/07/03/旋轉吧旋轉吧-宇宙啊宇宙-也為你將轉個不停/","2025/07/03/十萬個為什麼-十萬個你是誰/","2025/07/03/貓科女孩/","2025/07/03/從誕生-到轉生/","2025/07/03/最終話/","2025/07/03/Happy-birth-day/","2025/07/03/噓/","2025/07/03/小川先生/","2025/07/03/在梅邊/","2025/07/03/生存以上-生活以下/","2025/07/03/孩子氣for-little-one/","2025/07/03/我和音樂-戀愛ing/","2025/07/03/公告：食宿從薪資裡扣除-本月倒欠錄音室三萬/","2025/07/03/知足常樂ㄩㄝ/","2025/07/03/鹹魚/","2025/07/03/我是海賊/","2025/07/03/菜頭粿/","2025/07/03/嗨！有關海/","2025/07/03/歡迎光臨大雞腿/","2025/07/03/墾丁-蒼蠅啃-蚊子叮/","2025/07/03/寂寞堂口temp/","2025/07/03/金多蝦temp/","2025/07/03/絲路-在陌生的旋律裡孤獨的游牧/","2025/07/03/麥來亂temp/","2025/07/03/what-is-dream/","2025/07/03/牙關temp/","2025/07/03/人面-詩身-暫存/","2025/07/03/第一天-h-a-p-p-y-b-i-r-t-h-d-a-y/","2025/07/03/something-in-a-day/","2025/07/03/下輩子你要當什麼/","2025/07/03/衣服曬乾-風在穿/","2025/07/03/突然-就夏天了/","2025/07/03/念旧/","2025/07/03/水母面线庚/","2016/07/21/自传/","2011/12/16/第二人生/","2008/10/23/后青春期的诗/","2006/12/29/为爱而生/","2004/11/05/神的孩子都在跳舞/","2003/11/11/时光机/","2001/07/06/人生海海/","2001/07/06/爱情万岁/","1997/07/01/第一张创作专辑/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
