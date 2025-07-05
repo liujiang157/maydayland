@@ -10,7 +10,7 @@ for (let i of mdate) {
         document.documentElement.classList.add('memorial');
     }
 }
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script> <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script> <script>LA.init({id:"3MgjIBRKHyt9MyUR",ck:"3MgjIBRKHyt9MyUR"})</script><script>(()=>{
+</script><meta name="algolia-site-verification"  content="36CF42B20875C08A" /> <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script> <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script> <script>LA.init({id:"3MgjIBRKHyt9MyUR",ck:"3MgjIBRKHyt9MyUR"})</script><script>(()=>{
         const saveToLocal = {
             set: function setWithExpiry(key, value, ttl) {
                 if (ttl === 0)
@@ -361,34 +361,53 @@ utils.addGlobalFn('pjaxSend', () => {
   Pace.restart()
 }, 'pace_restart')
 </script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><div class="js-pjax"><script>(() => {
-    const initValine = () => {
-        const valine = new Valine({
-            el: '#vcomment',
-            appId: 'DfKdg2V0KiLbdCmoJQa3Se32-gzGzoHsz',
-            appKey: 'hNFFIkDHh6rK72QjsH6j96Ga',
-            avatar: 'wavatar',
-            serverURLs: 'https://dfkdg2v0.lc-cn-n1-shared.com',
-            emojiMaps: "",
-            path: window.location.pathname,
-            visitor: true,
-            ...{"placeholder":"就算世界荒芜，总要有人写下温暖。🖐️","requiredFields":["nick","mail"],"lang":"zh-CN","pageSize":50,"highlight":true,"enableQQ":true}
-        })
-        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'))
-        sco.owoBig({body: '.vwrap', item: '.vemojis i'})
+  const initValine = () => {
+    const valine = new Valine({
+      el: '#vcomment',
+      appId: 'DfKdg2V0KiLbdCmoJQa3Se32-gzGzoHsz',
+      appKey: 'hNFFIkDHh6rK72QjsH6j96Ga',
+      avatar: 'wavatar',
+      serverURLs: 'https://dfkdg2v0.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true,
+      ...{"placeholder":"就算世界荒芜，总要有人写下温暖。🖐️","requiredFields":["nick","mail"],"lang":"zh-CN","pageSize":50,"highlight":true,"enableQQ":true}
+    });
+
+    GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'));
+    sco.owoBig({ body: '.vwrap', item: '.vemojis i' });
+
+    // 新增：修改昵称输入框 placeholder
+    setTimeout(() => {
+      const nickInput = document.querySelector('#vcomment .vheader input');
+      if (nickInput) {
+        nickInput.placeholder = '昵称（必填）';
+      }
+      const emailInput = document.querySelector('#vcomment .vheader input:nth-child(2)');
+      if (emailInput) {
+        emailInput.placeholder = '邮箱（必填）';
+      }
+      const siteInput = document.querySelector('#vcomment .vheader input:nth-child(3)');
+      if (siteInput) {
+        siteInput.placeholder = '网址（非必填）:http://';
+      }
+    }, 100);
+  };
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') setTimeout(initValine, 0);
+    else {
+      await utils.getScript('https://fastly.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js').then(initValine);
     }
-    const loadValine = async () => {
-        if (typeof Valine === 'function') setTimeout(initValine, 0)
-        else {
-            await utils.getScript('https://fastly.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js').then(initValine)
-        }
-        false && barrageValine()
-    }
-    if ('Valine' === 'Valine' || false) {
-        if (false) utils.loadComment(document.getElementById('vcomment'), loadValine)
-        else loadValine()
-    } else {
-        window.loadTwoComment = loadValine
-    }
+    false && barrageValine();
+  };
+
+  if ('Valine' === 'Valine' || false) {
+    if (false) utils.loadComment(document.getElementById('vcomment'), loadValine);
+    else loadValine();
+  } else {
+    window.loadTwoComment = loadValine;
+  }
 })()
 </script><script>mermaid.run();
 </script></div></div><!-- pjax--><script>const pjax = new Pjax({
