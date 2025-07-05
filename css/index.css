@@ -17398,6 +17398,239 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   overflow: hidden;
   height: 200px;
 }
+.search-dialog {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  z-index: 1001;
+  display: none;
+  margin-left: -15rem;
+  padding: 1rem;
+  width: 30rem;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: var(--efu-shadow-lightblack);
+  box-shadow: var(--efu-shadow-lightblack);
+  background: var(--efu-card-bg);
+  border: var(--style-border);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 8px;
+  -webkit-animation: slide-in 0.6s ease 0s 1 normal none running;
+  -moz-animation: slide-in 0.6s ease 0s 1 normal none running;
+  -o-animation: slide-in 0.6s ease 0s 1 normal none running;
+  -ms-animation: slide-in 0.6s ease 0s 1 normal none running;
+  animation: slide-in 0.6s ease 0s 1 normal none running;
+  gap: 16px;
+}
+.search-dialog:hover {
+  border: var(--style-border-hover);
+  -webkit-box-shadow: var(--efu-shadow-theme);
+  box-shadow: var(--efu-shadow-theme);
+}
+@media screen and (max-width: 768px) {
+  .search-dialog:hover {
+    border: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-dialog {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+.search-dialog .algolia-navbar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.search-dialog .search-close-button {
+  margin-left: 4px;
+  padding: 4px;
+  color: var(--efu-gray);
+  font-size: 1.4em;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-in-out 0s;
+  -moz-transition: color 0.2s ease-in-out 0s;
+  -o-transition: color 0.2s ease-in-out 0s;
+  -ms-transition: color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s;
+}
+.search-dialog .search-close-button:hover {
+  color: var(--efu-main);
+}
+.search-dialog .algolia-tips-text {
+  margin-left: 0.4rem;
+}
+.search-dialog .search-box,
+.search-dialog .ais-SearchBox {
+  padding-top: 8px;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+}
+.search-dialog .search-box input,
+.search-dialog .ais-SearchBox input,
+.search-dialog .search-box .ais-SearchBox-input,
+.search-dialog .ais-SearchBox .ais-SearchBox-input {
+  height: 100%;
+  width: 100%;
+  padding: 0.25rem 0.7rem;
+  outline: 0;
+  border: var(--style-border);
+  border-radius: 8px;
+  background: var(--efu-secondbg);
+  color: var(--efu-fontcolor);
+}
+.search-dialog .search-box input:focus,
+.search-dialog .ais-SearchBox input:focus,
+.search-dialog .search-box .ais-SearchBox-input:focus,
+.search-dialog .ais-SearchBox .ais-SearchBox-input:focus {
+  border: var(--style-border-hover);
+}
+.search-dialog .ais-Pagination .ais-Pagination-item--disabled {
+  visibility: hidden;
+}
+.search-dialog #search-results {
+  max-height: calc(80vh - 130px);
+  overflow-y: auto;
+}
+@media screen and (max-width: 768px) {
+  .search-dialog #search-results {
+    max-height: 80vh !important;
+  }
+}
+.search-dialog .ais-Hits-list {
+  padding: 0;
+  margin: 0;
+}
+.search-dialog .algolia-hit-item-content {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  color: var(--efu-gray);
+}
+.search-dialog .algolia-hit-item-link {
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+}
+.search-dialog .algolia-hit-item-link:hover {
+  color: var(--efu-main);
+}
+.search-dialog .ais-Stats-text {
+  font-size: 12px;
+}
+.search-dialog mark {
+  color: var(--efu-theme);
+  font-style: normal;
+  background: var(--efu-card-bg);
+}
+.search-dialog .ais-Hits--empty {
+  font-weight: 600;
+}
+.search-dialog .ais-Pagination-list {
+  padding: 0;
+  text-align: center;
+}
+.search-dialog .ais-Pagination-item.pagination-item {
+  margin: 0 0.2rem;
+  padding: 0;
+  display: inline-block;
+}
+.search-dialog .ais-Pagination-item.pagination-item a {
+  border-radius: 4px;
+  color: var(--efu-white);
+  cursor: pointer;
+  display: inline-block;
+  min-width: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+}
+.search-dialog .search-dialog__title {
+  font-weight: 700;
+  color: var(--efu-main);
+  font-size: 1.4em;
+  line-height: 1;
+}
+.search-dialog #algolia-tips {
+  color: var(--efu-secondtext);
+  width: 100%;
+  margin: auto;
+}
+.search-dialog #algolia-tips .algolia-tips-text {
+  margin-left: 0.4rem;
+}
+#search-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  background: var(--efu-maskbgdeep);
+}
+#algolia-hits .tag-list {
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  border: var(--style-border-always);
+}
+#algolia-hits .tag-list:hover {
+  background: var(--efu-main);
+  color: var(--efu-white);
+}
+.ais-Pagination-item--selected a {
+  background: var(--efu-main);
+}
+.algolia-tips {
+  color: var(--efu-secondtext);
+  margin-left: auto;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.algolia-tips i {
+  font-size: 18px;
+}
+#algolia-search .search-dialog .ais-SearchBox-input::placeholder {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+}
 .article-container figure.gallery-group {
   position: relative;
   overflow: hidden;
