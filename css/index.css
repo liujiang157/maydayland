@@ -3714,14 +3714,14 @@ span.tags-punctuation i {
   filter: alpha(opacity=10);
   width: 100%;
   height: 100%;
-  background-image: url("https://i.pinimg.com/736x/32/1f/ac/321fac343025ef93fabbcb0e047416f8.jpg");
+  background-image: url("https://maydaysansan.oss-cn-beijing.aliyuncs.com/light321fac343025ef93fabbcb0e047416f8.jpg");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("https://i.pinimg.com/736x/98/19/2e/98192ea0a127fc8dcb8d450a48d15fda.jpg");
+  background-image: url("https://maydaysansan.oss-cn-beijing.aliyuncs.com/dark98192ea0a127fc8dcb8d450a48d15fda.jpg");
 }
 .article-container {
   overflow-wrap: break-word;
