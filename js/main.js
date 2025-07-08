@@ -894,10 +894,22 @@ const forPostFn = () => {
   scrollFnToDo();
 };
 
-window.refreshFn = () => {
+window.refreshFn = async () => {
+  // --- 新增 Waline 评论和弹幕刷新代码（加 async 并 await 保证顺序） ---
+  if (window.walineInstance && typeof window.walineInstance.destroy === 'function') {
+    window.walineInstance.destroy();
+  }
+  if (typeof loadWaline === 'function') {
+    await loadWaline();
+  }
+  if (typeof barrageWaline === 'function') {
+    await barrageWaline();
+  }
+  // --- 以上为新增部分 ---
+
   const { is_home, is_page, page, is_post, ai_text } = PAGE_CONFIG;
   const { runtime, lazyload, lightbox, randomlink, covercolor, lure, expire } =
-    GLOBAL_CONFIG;
+      GLOBAL_CONFIG;
   const timeSelector = ".datetime, .webinfo-item time, .post-meta-date time";
   document.body.setAttribute("data-type", page);
   sco.changeTimeFormat(document.querySelectorAll(timeSelector));
@@ -916,11 +928,11 @@ window.refreshFn = () => {
   ].forEach((fn) => fn());
   lazyload.enable && utils.lazyloadImg();
   lightbox &&
-    utils.lightbox(
+  utils.lightbox(
       document.querySelectorAll(
-        ".article-container img:not(.flink-avatar,.gallery-group img, .no-lightbox)"
+          ".article-container img:not(.flink-avatar,.gallery-group img, .no-lightbox)"
       )
-    );
+  );
   randomlink && randomLinksList();
   if (is_post) {
     if (ai_text) {
@@ -933,8 +945,9 @@ window.refreshFn = () => {
     showTodayCard();
     sco.homeTypeit();
   }
+
   typeof updatePostsBasedOnComments === "function" &&
-    updatePostsBasedOnComments();
+  updatePostsBasedOnComments();
   if (is_post || is_page) {
     addHighlight();
     tabs.init();
@@ -948,6 +961,7 @@ window.refreshFn = () => {
   page === "music" && initializeMusicPlayer();
   forPostFn();
 };
+
 
 document.addEventListener("DOMContentLoaded", () => {
   [
