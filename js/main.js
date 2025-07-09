@@ -895,17 +895,12 @@ const forPostFn = () => {
 };
 
 window.refreshFn = async () => {
-  // --- 新增 Waline 评论和弹幕刷新代码（加 async 并 await 保证顺序） ---
-  if (window.walineInstance && typeof window.walineInstance.destroy === 'function') {
-    window.walineInstance.destroy();
-  }
-  if (typeof loadWaline === 'function') {
-    await loadWaline();
-  }
-  if (typeof barrageWaline === 'function') {
-    await barrageWaline();
-  }
-  // --- 以上为新增部分 ---
+  setTimeout(function() {
+    var walineWrap = document.getElementById('waline-wrap');
+    if (walineWrap && window.loadTwoComment) {
+      window.loadTwoComment();
+    }
+  }, 0);
 
   const { is_home, is_page, page, is_post, ai_text } = PAGE_CONFIG;
   const { runtime, lazyload, lightbox, randomlink, covercolor, lure, expire } =
@@ -962,7 +957,6 @@ window.refreshFn = async () => {
   forPostFn();
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
   [
     addCopyright,
@@ -994,4 +988,13 @@ window.onkeydown = (e) => {
 
 document.addEventListener("copy", () => {
   utils.snackbarShow(GLOBAL_CONFIG.lang.copy.success, false, 3000);
+});
+
+document.addEventListener('pjax:complete', function() {
+  setTimeout(function() {
+    var walineWrap = document.getElementById('waline-wrap');
+    if (walineWrap && window.loadTwoComment) {
+      window.loadTwoComment();
+    }
+  }, 0);
 });
