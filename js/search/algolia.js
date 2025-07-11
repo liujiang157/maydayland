@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container: "#algolia-hits",
         templates: {
             item(data) {
-                const link =  "http://47.117.127.7"+ data.path;
+                const link =  "https://mayday.fan"+ data.path;
                 const result = data._highlightResult;
                 const loadingLogo = document.querySelector("#algolia-hits .loading");
                 if (loadingLogo) {
