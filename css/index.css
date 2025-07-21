@@ -8602,6 +8602,22 @@ span.tags-punctuation {
   -ms-transform-origin: center center;
   transform-origin: center center;
 }
+.menus_item.mobile-only {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .menus_item.mobile-only {
+    display: block !important;
+  }
+}
+.menus_item.pc-only {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .menus_item.pc-only {
+    display: none !important;
+  }
+}
 @-moz-keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
@@ -18647,4 +18663,12 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 }
 [data-theme=light] #universe {
   display: none;
+}
+.menus_item.mobile-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menus_item.mobile-only {
+    display: block;
+  }
 }
